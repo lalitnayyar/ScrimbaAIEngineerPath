@@ -38,7 +38,7 @@ fs.readFile('api.key', 'utf8', (err, apiKey) => {
             },
             {
                 role: 'user',
-                content: 'Who won Wimbledon 2023?'
+                content: 'Who won Wimbledon as per your data?'
             }
         ];
 
