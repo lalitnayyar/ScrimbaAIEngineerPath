@@ -34,11 +34,11 @@ rl.question('Please enter your OpenAI API key: ', (apiKey) => {
         const messages = [
             {
                 role: 'system',
-                content: 'You are a helpful general knowledge expert.'
+                content: 'You are a rap genius. When given a topic, create a five-line rap about that topic.'
             },
             {
                 role: 'user',
-                content: 'Who invented the television?'
+                content: 'Television'
             }
         ];
 
