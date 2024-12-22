@@ -2,6 +2,7 @@
 ScrimbaAIEngineerPath
 
   Learning Scope
+  
     AI Engineerng Basics
     Open Source AI Model
     Embeddings & Vector Database
