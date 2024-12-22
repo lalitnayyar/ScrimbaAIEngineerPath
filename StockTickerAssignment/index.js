@@ -1,7 +1,16 @@
+const fs = require('fs');
 import { dates } from '/utils/dates'
 
-const tickersArr = []
 
+const tickersArr = []
+fs.readFile('polygonapi.key', 'utf8', (err, apiKey) => {
+    if (err) {
+        console.error('Error reading API key from file:', err);
+        return;
+    }
+
+    const POLYGON_API_KEY = apiKey.trim();
+})
 const generateReportBtn = document.querySelector('.generate-report-btn')
 
 generateReportBtn.addEventListener('click', fetchStockData)
@@ -39,7 +48,6 @@ const apiMessage = document.getElementById('api-message')
 async function fetchStockData() {
     document.querySelector('.action-panel').style.display = 'none'
     loadingArea.style.display = 'flex'
-    const POLYGON_API_KEY = '9Z54V4NNOWl4kq_dnxD6uIDPzpmLbuhp'
     try {
         const stockData = await Promise.all(tickersArr.map(async (ticker) => {
             const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey=${POLYGON_API_KEY}`
@@ -62,6 +70,7 @@ async function fetchStockData() {
 
 async function fetchReport(data) {
     /** AI goes here **/
+    console.log(data)
 }
 
 function renderReport(output) {
