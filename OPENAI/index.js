@@ -34,11 +34,11 @@ fs.readFile('api.key', 'utf8', (err, apiKey) => {
         const messages = [
             {
                 role: 'system',
-                content: 'You are a rap genius. When given a topic, create a five-line rap about that topic.'
+                content: 'You are a helpful assistant'
             },
             {
                 role: 'user',
-                content: 'Television'
+                content: 'Who won Wimbledon 2023?'
             }
         ];
 
