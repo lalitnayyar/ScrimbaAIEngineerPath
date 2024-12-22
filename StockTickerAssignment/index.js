@@ -1,16 +1,8 @@
-const fs = require('fs');
 import { dates } from '/utils/dates'
-
+import OpenAI from "openai"
 
 const tickersArr = []
-fs.readFile('polygonapi.key', 'utf8', (err, apiKey) => {
-    if (err) {
-        console.error('Error reading API key from file:', err);
-        return;
-    }
 
-    const POLYGON_API_KEY = apiKey.trim();
-})
 const generateReportBtn = document.querySelector('.generate-report-btn')
 
 generateReportBtn.addEventListener('click', fetchStockData)
@@ -50,7 +42,7 @@ async function fetchStockData() {
     loadingArea.style.display = 'flex'
     try {
         const stockData = await Promise.all(tickersArr.map(async (ticker) => {
-            const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey=${POLYGON_API_KEY}`
+            const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey=9Z54V4NNOWl4kq_dnxD6uIDPzpmLbuhp`
             const response = await fetch(url)
             const data = await response.text()
             const status = await response.status
@@ -69,8 +61,17 @@ async function fetchStockData() {
 }
 
 async function fetchReport(data) {
-    /** AI goes here **/
     console.log(data)
+/** 
+ * Challenge:
+ * 1. Use the OpenAI API to generate a report advising 
+ * on whether to buy or sell the shares based on the data 
+ * that comes in as a parameter.
+ * 
+ * 🎁 See hint.md for help!
+ * 
+ * 🏆 Bonus points: use a try catch to handle errors.
+ * **/
 }
 
 function renderReport(output) {

@@ -17,3 +17,6 @@ The Frontend Developer Career Path aims to teach you everything you need to beco
 - [Become a Scrimba Pro member](https://scrimba.com/pricing)
 
 Happy Coding!
+
+
+{"ticker":"AAPL","queryCount":1,"resultsCount":1,"adjusted":true,"results":[{"v":1.39662529e+08,"vw":253.1175,"o":248.04,"c":254.49,"h":255,"l":245.69,"t":1734670800000,"n":550815}],"status":"DELAYED","request_id":"508e717aa6c64ccf1ea195a0f7e5cec0","count":1}{"ticker":"MSFT","queryCount":1,"resultsCount":1,"adjusted":true,"results":[{"v":5.5820435e+07,"vw":436.2044,"o":433.11,"c":436.6,"h":443.74,"l":428.63,"t":1734670800000,"n":365836}],"status":"DELAYED","request_id":"f867d0e572fe1abf55a553ea6c2f0de5","count":1}{"ticker":"AMZN","queryCount":1,"resultsCount":1,"adjusted":true,"results":[{"v":7.651796e+07,"vw":223.8006,"o":219.84,"c":224.92,"h":226.21,"l":218.73,"t":1734670800000,"n":456121}],"status":"DELAYED","request_id":"0e46730f76505b8ef57ad350e9ea512b","count":1}
