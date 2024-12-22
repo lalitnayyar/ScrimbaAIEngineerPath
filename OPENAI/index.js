@@ -1,14 +1,14 @@
-const readline = require('readline');
+const fs = require('fs');
 const OpenAI = require('openai');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+fs.readFile('api.key', 'utf8', (err, apiKey) => {
+    if (err) {
+        console.error('Error reading API key from file:', err);
+        return;
+    }
 
-rl.question('Please enter your OpenAI API key: ', (apiKey) => {
     const openai = new OpenAI({
-        apiKey: apiKey,
+        apiKey: apiKey.trim(),
         dangerouslyAllowBrowser: true
     });
 
@@ -51,5 +51,4 @@ rl.question('Please enter your OpenAI API key: ', (apiKey) => {
     }
 
     getResponse();
-    rl.close();
 });
