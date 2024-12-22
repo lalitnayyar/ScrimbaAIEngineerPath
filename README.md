@@ -12,5 +12,7 @@ ScrimbaAIEngineerPath
     Solo Projects
 
 Two Technologies used
+
   Hugging Face - https://huggingface.co/
+  
   LangChain - https://smith.langchain.com/
